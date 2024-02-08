@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Task 5 for Square class"""
 
+
 class Square:
     """ Class that create a square"""
     def __init__(self, size=0):
