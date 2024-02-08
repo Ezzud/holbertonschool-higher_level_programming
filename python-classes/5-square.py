@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 class Square:
-    """ Square Class
+    """ Class that create a square
     """
     def __init__(self, size=0):
-        """ Init square
+        """ Init the square object
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")

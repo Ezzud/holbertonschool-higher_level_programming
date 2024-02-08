@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 class Square:
-    """Square Class
+    """Class that create a square
     """
     pass
