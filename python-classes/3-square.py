@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 class Square:
     def __init__(self, size=0):
+        """ Square class
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -9,4 +11,6 @@ class Square:
             self.__size = size
 
     def area(self):
+        """ Return square
+        """
         return (self.__size ** 2)
