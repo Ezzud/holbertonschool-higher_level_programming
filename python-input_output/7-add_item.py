@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """ Module to import a file into a list & save it
 """
+
+
 import sys
 import os.path
 
