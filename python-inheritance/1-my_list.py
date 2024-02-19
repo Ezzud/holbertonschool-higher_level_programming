@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" Task 1 file
+"""
+
+
 class MyList(list):
     """ Inherits the attributes of a list"""
 

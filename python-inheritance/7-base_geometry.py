@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" Task 7 file
+"""
+
+
 class BaseGeometry:
     """ Class that defines attributes of a shape """
 

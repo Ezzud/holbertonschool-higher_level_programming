@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Task 10 file
+"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
