@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ File that contains the Square class
 based from the Rectangle class
-""" 
+"""
 from models.rectangle import Rectangle
 
 

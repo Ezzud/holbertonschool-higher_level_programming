@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ File that contains the Rectangle class
 based from the Base class
-""" 
+"""
 from models.base import Base
 
 
