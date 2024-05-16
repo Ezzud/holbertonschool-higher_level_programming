@@ -1,2 +1,0 @@
-# Python classes
-py scripts

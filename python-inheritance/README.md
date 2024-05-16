@@ -1,2 +1,0 @@
-# Inheritance
-py script
