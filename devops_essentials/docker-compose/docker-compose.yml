@@ -1,0 +1,48 @@
+services:
+  db:
+    image: postgres
+    container_name: postgredb
+    restart: always
+    networks:
+      - postgre
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: supersecretpassword
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - postgre_data:/var/lib/postgresql/data
+  admin:
+    image: dpage/pgadmin4
+    container_name: pgadmindb
+    networks:
+      - postgre
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@ezzud.fr
+      PGADMIN_DEFAULT_PASSWORD: supersecretpassword
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+  gateway:
+    image: debian
+    networks:
+      postgre:
+        aliases:
+          - db_d
+          - admin_d
+    depends_on:
+      - db
+      - admin
+volumes:
+  postgre_data:
+  pgadmin:
+networks:
+  postgre:
+    driver: bridge
